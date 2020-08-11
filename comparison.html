@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Data Visualization Homepage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+    </head>
+
+  <body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+       
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="col-lg-12">
+            <a class="navbar-brand" href="index.html" id="logo">Births, Crime, and Incarceration</a>
+          </div>
+        </div>
+  
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="visualizations/births.html">Birth Rates</a></li>
+                <li><a href="visualizations/property.html">Property Crimes</a></li>
+                <li><a href="visualizations/violent.html">Violent Crimes</a></li>
+                <li><a href="visualizations/incar.html">Incarceration Rates</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Data/birth_data.html">Birth Rate Data</a></li>
+                <li><a href="Data/crime_data.html">Crime Rate Data</a></li>
+                <li><a href="Data/incar_data.html">Incarceration Rate Data</a></li>
+              </ul>
+            </li>
+            <li><a href="comparison.html">Comparison</a></li>
+          </ul>
+
+         
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <!-- End of navbar -->
+
+    <!-- Start of container -->
+    <div class="container">
+      <article class="description-content row">
+        <div class="col-xs-12">
+          <h1 class="description-header">Comparisons</h1>
+          <hr class="description-hr"/>
+        </div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Incarceration Rate vs Birth Rate</h2>
+          <a><img src="Resources/assets/images/Fig5.png" alt="Incarceration vs. Births" class="comparison-image img-responsive"></a>
+          <hr class="visible-xs visible-sm">
+          <p class="description-text">This is comparison of the change in incarceration rate to birth rates of single mothers aged 20 and under. We can see that there is a slight positive correlation between them, however there is wide variability, so they might be correlated due to time.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Lagged Incarceration vs Property Crime</h2>
+          <a><img src="Resources/assets/images/Fig8.png" alt="Latitude vs. Humidity" class="comparison-image img-responsive"></a>
+          <hr class="visible-xs visible-sm">
+          <p class="description-text">This is comparison of a lagged Incarceration Rate of 5 years and Property Crime. We can see that there is an extremely positive correlation between them, suggesting that public policy takes around 5 years to catch up.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Property Crime vs Birth Rate</h2>
+          <a><img src="Resources/assets/images/Fig6.png" alt="Property Crimes vs. Births" class="comparison-image img-responsive"></a>
+          <hr class="visible-xs visible-sm">
+          <p class="description-text">This is comparison of property crime rate to birth rates of single mothers aged 20 and under. We can see that there is a slight positive correlation between them,  however it looks that they might be correlated due to time.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Violent Crime vs Birth Rate</h2>
+          <a><img src="Resources/assets/images/Fig7.png" alt="Violent Crimes vs. Births" class="comparison-image img-responsive"></a>
+          <p class="description-text">This is comparison of property crime rate to birth rates of single mothers aged 20 and under. We can see that there is a stronger positive correlation between them, leading me to believe that a violent enviornment might effect teen birth rates.</p>
+        </div>
+      </article>
+    </div>
+    <!-- End of container  -->
+
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

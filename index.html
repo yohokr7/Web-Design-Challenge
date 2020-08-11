@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Data Visualization Homepage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+    </head>
+
+    <body>
+        <!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+       
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="col-lg-12">
+            <a class="navbar-brand" href="/index.html" id="logo">Births, Crime, and Incarceration</a>
+          </div>
+        </div>
+  
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="visualizations/births.html">Birth Rates</a></li>
+                <li><a href="visualizations/property.html">Property Crimes</a></li>
+                <li><a href="visualizations/violent.html">Violent Crimes</a></li>
+                <li><a href="visualizations/incar.html">Incarceration Rates</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Data/birth_data.html">Birth Rate Data</a></li>
+                <li><a href="Data/crime_data.html">Crime Rate Data</a></li>
+                <li><a href="Data/incar_data.html">Incarceration Rate Data</a></li>
+              </ul>
+            </li>
+            <li><a href="comparison.html">Comparison</a></li>
+          </ul>
+
+         
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <!-- End of navbar -->
+
+          <div class="container">
+            <section class="row">
+              <div class="col-md-12">
+                <article class="description-content">
+                  <h1 class="description-header">A Look into Unmarried Birth Rates, Crime, and Incarceration Rates</h1>
+                  <hr class="description-hr"/>
+                  <p>I decided to use Data from a side project I was doing rather than use the Data provided. I was interested in seeing if there was any correlation between young single motherhood, crime rates and mass incarceration</p>
+                  <p>After assembling the datasets, I cleaned the data using Pandas and then plotted the data using MatPlotLib.</p>
+                </article>
+                
+              
+              </div>
+    
+            </section>
+            <section>
+              <div class="row">
+                <div class="col-md-6">
+                  <section id="imageNav-area">
+                    <div class="imageNav-content">
+                      <h2 class="imageNav-header">Visualizations</h2>
+                      <hr />
+                      <div id="images">
+                        <a href="visualizations/births.html"><img src="Resources/assets/images/Fig1.png" alt="Birth Rate" class="imageNav-photo"></a>
+                        <a href="visualizations/property.html"><img src="Resources/assets/images/Fig2.png" alt="Property Crime" class="imageNav-photo"></a>
+                        <a href="visualizations/violent.html"><img src="Resources/assets/images/Fig3.png" alt="Violent Crime" class="imageNav-photo"></a>
+                        <a href="visualizations/incar.html"><img src="Resources/assets/images/Fig4.png" alt="Incarceration Rate" class="imageNav-photo"></a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="col-md-6">
+                  <section id="imageNav-area">
+                    <div class="imageNav-content">
+                      <h2 class="imageNav-header">Comparisons</h2>
+                      <hr />
+                      <div id="images">
+                        <a href="comparison.html"><img src="Resources/assets/images/Fig5.png" alt="Birth Rate" class="imageNav-photo"></a>
+                        <a href="comparison.html"><img src="Resources/assets/images/Fig6.png" alt="Property Crime" class="imageNav-photo"></a>
+                        <a href="comparison.html"><img src="Resources/assets/images/Fig7.png" alt="Violent Crime" class="imageNav-photo"></a>
+                        <a href="comparison.html"><img src="Resources/assets/images/Fig8.png" alt="Incarceration Rate" class="imageNav-photo"></a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+        
+          <!-- jQuery CDN -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+        <!-- Bootstrap CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
+      </body>
+</html>

@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Data Visualization Homepage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+    </head>
+
+    <body>
+      <!-- Start of navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+      
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="col-lg-12">
+              <a class="navbar-brand" href="../index.html" id="logo">Births, Crime, and Incarceration</a>
+            </div>
+          </div>
+    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../visualizations/births.html">Birth Rates</a></li>
+                  <li><a href="../visualizations/property.html">Property Crimes</a></li>
+                  <li><a href="../visualizations/violent.html">Violent Crimes</a></li>
+                  <li><a href="../visualizations/incar.html">Incarceration Rates</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="birth_data.html">Birth Rate Data</a></li>
+                  <li><a href="crime_data.html">Crime Rate Data</a></li>
+                  <li><a href="incar_data.html">Incarceration Rate Data</a></li>
+                </ul>
+              </li>
+              <li class="active"><a href="../comparison.html">Comparison <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    <!-- End of navbar -->
+
+    <!-- Start of container -->
+    <div class="container">
+      <article class="description-content row">
+        <div class="col-xs-12">
+          <h1 class="description-header">Unmarried Birth Data</h1>
+          <hr class="description-hr"/>
+          <p class="description-text">I took a Dataset of number of births to unmarried women by age range, and filtered it to only include younger mothers (aged 20 and younger). In order to adjust the numbers to the changing demographics of America, I felt is was best to calculate the number as a percent of total births to allow the numbers to be more comparable. The dataset also includes women aged 20-24, as I want to do a comparison using that data in the future, but I did not include it in the current comparisons as it actually lead to less of a correlation.</p>
+          <p class="description-text">This is the <a href='https://www.kaggle.com/cdc/nchs-births-and-birth-rates-data'>source</a> of the data.</p>
+          <div class="table-responsive">
+            <table  class="table table-striped table-hover">
+              <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Year</th>
+                  <th>Age Group</th>
+                  <th>Number of Births</th>
+                  <th>Total Births</th>
+                  <th>% of Total Births</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>0</th>
+                  <td>1940</td>
+                  <td>15-19 years</td>
+                  <td>40500</td>
+                  <td>2559000</td>
+                  <td>1.582649</td>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <td>1940</td>
+                  <td>20-24 years</td>
+                  <td>27200</td>
+                  <td>2559000</td>
+                  <td>1.062915</td>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <td>1950</td>
+                  <td>15-19 years</td>
+                  <td>56000</td>
+                  <td>3632000</td>
+                  <td>1.541850</td>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <td>1950</td>
+                  <td>20-24 years</td>
+                  <td>43100</td>
+                  <td>3632000</td>
+                  <td>1.186674</td>
+                </tr>
+                <tr>
+                  <th>10</th>
+                  <td>1951</td>
+                  <td>15-19 years</td>
+                  <td>57400</td>
+                  <td>3820000</td>
+                  <td>1.502618</td>
+                </tr>
+                <tr>
+                  <th>11</th>
+                  <td>1951</td>
+                  <td>20-24 years</td>
+                  <td>43900</td>
+                  <td>3820000</td>
+                  <td>1.149215</td>
+                </tr>
+                <tr>
+                  <th>15</th>
+                  <td>1952</td>
+                  <td>15-19 years</td>
+                  <td>58700</td>
+                  <td>3909000</td>
+                  <td>1.501663</td>
+                </tr>
+                <tr>
+                  <th>16</th>
+                  <td>1952</td>
+                  <td>20-24 years</td>
+                  <td>45500</td>
+                  <td>3909000</td>
+                  <td>1.163981</td>
+                </tr>
+                <tr>
+                  <th>20</th>
+                  <td>1953</td>
+                  <td>15-19 years</td>
+                  <td>61500</td>
+                  <td>3959000</td>
+                  <td>1.553423</td>
+                </tr>
+                <tr>
+                  <th>21</th>
+                  <td>1953</td>
+                  <td>20-24 years</td>
+                  <td>48800</td>
+                  <td>3959000</td>
+                  <td>1.232635</td>
+                </tr>
+                <tr>
+                  <th>25</th>
+                  <td>1954</td>
+                  <td>15-19 years</td>
+                  <td>67200</td>
+                  <td>4071000</td>
+                  <td>1.650700</td>
+                </tr>
+                <tr>
+                  <th>26</th>
+                  <td>1954</td>
+                  <td>20-24 years</td>
+                  <td>53300</td>
+                  <td>4071000</td>
+                  <td>1.309261</td>
+                </tr>
+                <tr>
+                  <th>30</th>
+                  <td>1955</td>
+                  <td>15-19 years</td>
+                  <td>68900</td>
+                  <td>4097000</td>
+                  <td>1.681718</td>
+                </tr>
+                <tr>
+                  <th>31</th>
+                  <td>1955</td>
+                  <td>20-24 years</td>
+                  <td>55700</td>
+                  <td>4097000</td>
+                  <td>1.359531</td>
+                </tr>
+                <tr>
+                  <th>35</th>
+                  <td>1956</td>
+                  <td>15-19 years</td>
+                  <td>72800</td>
+                  <td>4210000</td>
+                  <td>1.729216</td>
+                </tr>
+                <tr>
+                  <th>36</th>
+                  <td>1956</td>
+                  <td>20-24 years</td>
+                  <td>58800</td>
+                  <td>4210000</td>
+                  <td>1.396675</td>
+                </tr>
+                <tr>
+                  <th>40</th>
+                  <td>1957</td>
+                  <td>15-19 years</td>
+                  <td>76400</td>
+                  <td>4300000</td>
+                  <td>1.776744</td>
+                </tr>
+                <tr>
+                  <th>41</th>
+                  <td>1957</td>
+                  <td>20-24 years</td>
+                  <td>60500</td>
+                  <td>4300000</td>
+                  <td>1.406977</td>
+                </tr>
+                <tr>
+                  <th>45</th>
+                  <td>1958</td>
+                  <td>15-19 years</td>
+                  <td>79400</td>
+                  <td>4246000</td>
+                  <td>1.869995</td>
+                </tr>
+                <tr>
+                  <th>46</th>
+                  <td>1958</td>
+                  <td>20-24 years</td>
+                  <td>62800</td>
+                  <td>4246000</td>
+                  <td>1.479039</td>
+                </tr>
+                <tr>
+                  <th>50</th>
+                  <td>1959</td>
+                  <td>15-19 years</td>
+                  <td>84500</td>
+                  <td>4244796</td>
+                  <td>1.990673</td>
+                </tr>
+                <tr>
+                  <th>51</th>
+                  <td>1959</td>
+                  <td>20-24 years</td>
+                  <td>67300</td>
+                  <td>4244796</td>
+                  <td>1.585471</td>
+                </tr>
+                <tr>
+                  <th>55</th>
+                  <td>1960</td>
+                  <td>15-19 years</td>
+                  <td>87100</td>
+                  <td>4257850</td>
+                  <td>2.045633</td>
+                </tr>
+                <tr>
+                  <th>56</th>
+                  <td>1960</td>
+                  <td>20-24 years</td>
+                  <td>68000</td>
+                  <td>4257850</td>
+                  <td>1.597050</td>
+                </tr>
+                <tr>
+                  <th>60</th>
+                  <td>1961</td>
+                  <td>15-19 years</td>
+                  <td>93200</td>
+                  <td>4268326</td>
+                  <td>2.183526</td>
+                </tr>
+                <tr>
+                  <th>61</th>
+                  <td>1961</td>
+                  <td>20-24 years</td>
+                  <td>74000</td>
+                  <td>4268326</td>
+                  <td>1.733701</td>
+                </tr>
+                <tr>
+                  <th>65</th>
+                  <td>1962</td>
+                  <td>15-19 years</td>
+                  <td>94400</td>
+                  <td>4167362</td>
+                  <td>2.265222</td>
+                </tr>
+                <tr>
+                  <th>66</th>
+                  <td>1962</td>
+                  <td>20-24 years</td>
+                  <td>77400</td>
+                  <td>4167362</td>
+                  <td>1.857290</td>
+                </tr>
+                <tr>
+                  <th>70</th>
+                  <td>1963</td>
+                  <td>15-19 years</td>
+                  <td>101800</td>
+                  <td>4098020</td>
+                  <td>2.484126</td>
+                </tr>
+                <tr>
+                  <th>71</th>
+                  <td>1963</td>
+                  <td>20-24 years</td>
+                  <td>82600</td>
+                  <td>4098020</td>
+                  <td>2.015608</td>
+                </tr>
+                <tr>
+                  <th>75</th>
+                  <td>1964</td>
+                  <td>15-19 years</td>
+                  <td>111400</td>
+                  <td>4027490</td>
+                  <td>2.765991</td>
+                </tr>
+                <tr>
+                  <th>76</th>
+                  <td>1964</td>
+                  <td>20-24 years</td>
+                  <td>87900</td>
+                  <td>4027490</td>
+                  <td>2.182501</td>
+                </tr>
+                <tr>
+                  <th>80</th>
+                  <td>1965</td>
+                  <td>15-19 years</td>
+                  <td>123200</td>
+                  <td>3760358</td>
+                  <td>3.276284</td>
+                </tr>
+                <tr>
+                  <th>81</th>
+                  <td>1965</td>
+                  <td>20-24 years</td>
+                  <td>90700</td>
+                  <td>3760358</td>
+                  <td>2.412004</td>
+                </tr>
+                <tr>
+                  <th>85</th>
+                  <td>1966</td>
+                  <td>15-19 years</td>
+                  <td>135800</td>
+                  <td>3606274</td>
+                  <td>3.765660</td>
+                </tr>
+                <tr>
+                  <th>86</th>
+                  <td>1966</td>
+                  <td>20-24 years</td>
+                  <td>92500</td>
+                  <td>3606274</td>
+                  <td>2.564974</td>
+                </tr>
+                <tr>
+                  <th>90</th>
+                  <td>1967</td>
+                  <td>15-19 years</td>
+                  <td>144400</td>
+                  <td>3520959</td>
+                  <td>4.101155</td>
+                </tr>
+                <tr>
+                  <th>91</th>
+                  <td>1967</td>
+                  <td>20-24 years</td>
+                  <td>101600</td>
+                  <td>3520959</td>
+                  <td>2.885577</td>
+                </tr>
+                <tr>
+                  <th>95</th>
+                  <td>1968</td>
+                  <td>15-19 years</td>
+                  <td>158000</td>
+                  <td>3501564</td>
+                  <td>4.512269</td>
+                </tr>
+                <tr>
+                  <th>96</th>
+                  <td>1968</td>
+                  <td>20-24 years</td>
+                  <td>107900</td>
+                  <td>3501564</td>
+                  <td>3.081480</td>
+                </tr>
+                <tr>
+                  <th>100</th>
+                  <td>1969</td>
+                  <td>15-19 years</td>
+                  <td>168200</td>
+                  <td>3600206</td>
+                  <td>4.671955</td>
+                </tr>
+                <tr>
+                  <th>101</th>
+                  <td>1969</td>
+                  <td>20-24 years</td>
+                  <td>116900</td>
+                  <td>3600206</td>
+                  <td>3.247036</td>
+                </tr>
+                <tr>
+                  <th>105</th>
+                  <td>1970</td>
+                  <td>15-19 years</td>
+                  <td>190400</td>
+                  <td>3731386</td>
+                  <td>5.102662</td>
+                </tr>
+                <tr>
+                  <th>106</th>
+                  <td>1970</td>
+                  <td>20-24 years</td>
+                  <td>126700</td>
+                  <td>3731386</td>
+                  <td>3.395521</td>
+                </tr>
+                <tr>
+                  <th>110</th>
+                  <td>1971</td>
+                  <td>15-19 years</td>
+                  <td>194100</td>
+                  <td>3555970</td>
+                  <td>5.458426</td>
+                </tr>
+                <tr>
+                  <th>111</th>
+                  <td>1971</td>
+                  <td>20-24 years</td>
+                  <td>125200</td>
+                  <td>3555970</td>
+                  <td>3.520840</td>
+                </tr>
+                <tr>
+                  <th>115</th>
+                  <td>1972</td>
+                  <td>15-19 years</td>
+                  <td>202300</td>
+                  <td>3258411</td>
+                  <td>6.208548</td>
+                </tr>
+                <tr>
+                  <th>116</th>
+                  <td>1972</td>
+                  <td>20-24 years</td>
+                  <td>119600</td>
+                  <td>3258411</td>
+                  <td>3.670501</td>
+                </tr>
+                <tr>
+                  <th>120</th>
+                  <td>1973</td>
+                  <td>15-19 years</td>
+                  <td>204900</td>
+                  <td>3136965</td>
+                  <td>6.531791</td>
+                </tr>
+                <tr>
+                  <th>121</th>
+                  <td>1973</td>
+                  <td>20-24 years</td>
+                  <td>119100</td>
+                  <td>3136965</td>
+                  <td>3.796663</td>
+                </tr>
+                <tr>
+                  <th>125</th>
+                  <td>1974</td>
+                  <td>15-19 years</td>
+                  <td>210800</td>
+                  <td>3159958</td>
+                  <td>6.670975</td>
+                </tr>
+                <tr>
+                  <th>126</th>
+                  <td>1974</td>
+                  <td>20-24 years</td>
+                  <td>122700</td>
+                  <td>3159958</td>
+                  <td>3.882963</td>
+                </tr>
+                <tr>
+                  <th>130</th>
+                  <td>1975</td>
+                  <td>15-19 years</td>
+                  <td>222500</td>
+                  <td>3144198</td>
+                  <td>7.076526</td>
+                </tr>
+                <tr>
+                  <th>131</th>
+                  <td>1975</td>
+                  <td>20-24 years</td>
+                  <td>134000</td>
+                  <td>3144198</td>
+                  <td>4.261818</td>
+                </tr>
+                <tr>
+                  <th>135</th>
+                  <td>1976</td>
+                  <td>15-19 years</td>
+                  <td>225000</td>
+                  <td>3167788</td>
+                  <td>7.102748</td>
+                </tr>
+                <tr>
+                  <th>136</th>
+                  <td>1976</td>
+                  <td>20-24 years</td>
+                  <td>145400</td>
+                  <td>3167788</td>
+                  <td>4.589954</td>
+                </tr>
+                <tr>
+                  <th>140</th>
+                  <td>1977</td>
+                  <td>15-19 years</td>
+                  <td>239700</td>
+                  <td>3326632</td>
+                  <td>7.205486</td>
+                </tr>
+                <tr>
+                  <th>141</th>
+                  <td>1977</td>
+                  <td>20-24 years</td>
+                  <td>168600</td>
+                  <td>3326632</td>
+                  <td>5.068189</td>
+                </tr>
+                <tr>
+                  <th>145</th>
+                  <td>1978</td>
+                  <td>15-19 years</td>
+                  <td>239700</td>
+                  <td>3333279</td>
+                  <td>7.191117</td>
+                </tr>
+                <tr>
+                  <th>146</th>
+                  <td>1978</td>
+                  <td>20-24 years</td>
+                  <td>186500</td>
+                  <td>3333279</td>
+                  <td>5.595091</td>
+                </tr>
+                <tr>
+                  <th>150</th>
+                  <td>1979</td>
+                  <td>15-19 years</td>
+                  <td>253200</td>
+                  <td>3494398</td>
+                  <td>7.245883</td>
+                </tr>
+                <tr>
+                  <th>151</th>
+                  <td>1979</td>
+                  <td>20-24 years</td>
+                  <td>210100</td>
+                  <td>3494398</td>
+                  <td>6.012481</td>
+                </tr>
+                <tr>
+                  <th>155</th>
+                  <td>1980</td>
+                  <td>15-19 years</td>
+                  <td>262777</td>
+                  <td>3612258</td>
+                  <td>7.274591</td>
+                </tr>
+                <tr>
+                  <th>156</th>
+                  <td>1980</td>
+                  <td>20-24 years</td>
+                  <td>237265</td>
+                  <td>3612258</td>
+                  <td>6.568329</td>
+                </tr>
+                <tr>
+                  <th>160</th>
+                  <td>1981</td>
+                  <td>15-19 years</td>
+                  <td>259239</td>
+                  <td>3629238</td>
+                  <td>7.143070</td>
+                </tr>
+                <tr>
+                  <th>161</th>
+                  <td>1981</td>
+                  <td>20-24 years</td>
+                  <td>246919</td>
+                  <td>3629238</td>
+                  <td>6.803605</td>
+                </tr>
+                <tr>
+                  <th>165</th>
+                  <td>1982</td>
+                  <td>15-19 years</td>
+                  <td>260626</td>
+                  <td>3680537</td>
+                  <td>7.081195</td>
+                </tr>
+                <tr>
+                  <th>166</th>
+                  <td>1982</td>
+                  <td>20-24 years</td>
+                  <td>257473</td>
+                  <td>3680537</td>
+                  <td>6.995528</td>
+                </tr>
+                <tr>
+                  <th>170</th>
+                  <td>1983</td>
+                  <td>15-19 years</td>
+                  <td>261260</td>
+                  <td>3638933</td>
+                  <td>7.179577</td>
+                </tr>
+                <tr>
+                  <th>171</th>
+                  <td>1983</td>
+                  <td>20-24 years</td>
+                  <td>265579</td>
+                  <td>3638933</td>
+                  <td>7.298266</td>
+                </tr>
+                <tr>
+                  <th>175</th>
+                  <td>1984</td>
+                  <td>15-19 years</td>
+                  <td>261104</td>
+                  <td>3669141</td>
+                  <td>7.116216</td>
+                </tr>
+                <tr>
+                  <th>176</th>
+                  <td>1984</td>
+                  <td>20-24 years</td>
+                  <td>279192</td>
+                  <td>3669141</td>
+                  <td>7.609192</td>
+                </tr>
+                <tr>
+                  <th>180</th>
+                  <td>1985</td>
+                  <td>15-19 years</td>
+                  <td>270922</td>
+                  <td>3760561</td>
+                  <td>7.204297</td>
+                </tr>
+                <tr>
+                  <th>181</th>
+                  <td>1985</td>
+                  <td>20-24 years</td>
+                  <td>300365</td>
+                  <td>3760561</td>
+                  <td>7.987239</td>
+                </tr>
+                <tr>
+                  <th>185</th>
+                  <td>1986</td>
+                  <td>15-19 years</td>
+                  <td>280720</td>
+                  <td>3756547</td>
+                  <td>7.472820</td>
+                </tr>
+                <tr>
+                  <th>186</th>
+                  <td>1986</td>
+                  <td>20-24 years</td>
+                  <td>316188</td>
+                  <td>3756547</td>
+                  <td>8.416985</td>
+                </tr>
+                <tr>
+                  <th>190</th>
+                  <td>1987</td>
+                  <td>15-19 years</td>
+                  <td>292958</td>
+                  <td>3809394</td>
+                  <td>7.690410</td>
+                </tr>
+                <tr>
+                  <th>191</th>
+                  <td>1987</td>
+                  <td>20-24 years</td>
+                  <td>331257</td>
+                  <td>3809394</td>
+                  <td>8.695793</td>
+                </tr>
+                <tr>
+                  <th>195</th>
+                  <td>1988</td>
+                  <td>15-19 years</td>
+                  <td>312499</td>
+                  <td>3909510</td>
+                  <td>7.993304</td>
+                </tr>
+                <tr>
+                  <th>196</th>
+                  <td>1988</td>
+                  <td>20-24 years</td>
+                  <td>350905</td>
+                  <td>3909510</td>
+                  <td>8.975677</td>
+                </tr>
+                <tr>
+                  <th>200</th>
+                  <td>1989</td>
+                  <td>15-19 years</td>
+                  <td>337268</td>
+                  <td>4040958</td>
+                  <td>8.346239</td>
+                </tr>
+                <tr>
+                  <th>201</th>
+                  <td>1989</td>
+                  <td>20-24 years</td>
+                  <td>378122</td>
+                  <td>4040958</td>
+                  <td>9.357237</td>
+                </tr>
+                <tr>
+                  <th>205</th>
+                  <td>1990</td>
+                  <td>15-19 years</td>
+                  <td>349970</td>
+                  <td>4158212</td>
+                  <td>8.416358</td>
+                </tr>
+                <tr>
+                  <th>206</th>
+                  <td>1990</td>
+                  <td>20-24 years</td>
+                  <td>403873</td>
+                  <td>4158212</td>
+                  <td>9.712660</td>
+                </tr>
+                <tr>
+                  <th>210</th>
+                  <td>1991</td>
+                  <td>15-19 years</td>
+                  <td>357483</td>
+                  <td>4110907</td>
+                  <td>8.695964</td>
+                </tr>
+                <tr>
+                  <th>211</th>
+                  <td>1991</td>
+                  <td>20-24 years</td>
+                  <td>429094</td>
+                  <td>4110907</td>
+                  <td>10.437940</td>
+                </tr>
+                <tr>
+                  <th>215</th>
+                  <td>1992</td>
+                  <td>15-19 years</td>
+                  <td>353878</td>
+                  <td>4065014</td>
+                  <td>8.705456</td>
+                </tr>
+                <tr>
+                  <th>216</th>
+                  <td>1992</td>
+                  <td>20-24 years</td>
+                  <td>435727</td>
+                  <td>4065014</td>
+                  <td>10.718954</td>
+                </tr>
+                <tr>
+                  <th>220</th>
+                  <td>1993</td>
+                  <td>15-19 years</td>
+                  <td>357432</td>
+                  <td>4000240</td>
+                  <td>8.935264</td>
+                </tr>
+                <tr>
+                  <th>221</th>
+                  <td>1993</td>
+                  <td>20-24 years</td>
+                  <td>438538</td>
+                  <td>4000240</td>
+                  <td>10.962792</td>
+                </tr>
+                <tr>
+                  <th>225</th>
+                  <td>1994</td>
+                  <td>15-19 years</td>
+                  <td>381499</td>
+                  <td>3952767</td>
+                  <td>9.651442</td>
+                </tr>
+                <tr>
+                  <th>226</th>
+                  <td>1994</td>
+                  <td>20-24 years</td>
+                  <td>449246</td>
+                  <td>3952767</td>
+                  <td>11.365355</td>
+                </tr>
+                <tr>
+                  <th>230</th>
+                  <td>1995</td>
+                  <td>15-19 years</td>
+                  <td>375738</td>
+                  <td>3899589</td>
+                  <td>9.635323</td>
+                </tr>
+                <tr>
+                  <th>231</th>
+                  <td>1995</td>
+                  <td>20-24 years</td>
+                  <td>432003</td>
+                  <td>3899589</td>
+                  <td>11.078167</td>
+                </tr>
+                <tr>
+                  <th>235</th>
+                  <td>1996</td>
+                  <td>15-19 years</td>
+                  <td>373289</td>
+                  <td>3891494</td>
+                  <td>9.592434</td>
+                </tr>
+                <tr>
+                  <th>236</th>
+                  <td>1996</td>
+                  <td>20-24 years</td>
+                  <td>431462</td>
+                  <td>3891494</td>
+                  <td>11.087310</td>
+                </tr>
+                <tr>
+                  <th>240</th>
+                  <td>1997</td>
+                  <td>15-19 years</td>
+                  <td>376117</td>
+                  <td>3880894</td>
+                  <td>9.691504</td>
+                </tr>
+                <tr>
+                  <th>241</th>
+                  <td>1997</td>
+                  <td>20-24 years</td>
+                  <td>438632</td>
+                  <td>3880894</td>
+                  <td>11.302344</td>
+                </tr>
+                <tr>
+                  <th>245</th>
+                  <td>1998</td>
+                  <td>15-19 years</td>
+                  <td>380868</td>
+                  <td>3941553</td>
+                  <td>9.662892</td>
+                </tr>
+                <tr>
+                  <th>246</th>
+                  <td>1998</td>
+                  <td>20-24 years</td>
+                  <td>460367</td>
+                  <td>3941553</td>
+                  <td>11.679838</td>
+                </tr>
+                <tr>
+                  <th>250</th>
+                  <td>1999</td>
+                  <td>15-19 years</td>
+                  <td>374485</td>
+                  <td>3959417</td>
+                  <td>9.458084</td>
+                </tr>
+                <tr>
+                  <th>251</th>
+                  <td>1999</td>
+                  <td>20-24 years</td>
+                  <td>476497</td>
+                  <td>3959417</td>
+                  <td>12.034524</td>
+                </tr>
+                <tr>
+                  <th>255</th>
+                  <td>2000</td>
+                  <td>15-19 years</td>
+                  <td>369456</td>
+                  <td>4058814</td>
+                  <td>9.102561</td>
+                </tr>
+                <tr>
+                  <th>256</th>
+                  <td>2000</td>
+                  <td>20-24 years</td>
+                  <td>503602</td>
+                  <td>4058814</td>
+                  <td>12.407615</td>
+                </tr>
+                <tr>
+                  <th>260</th>
+                  <td>2001</td>
+                  <td>15-19 years</td>
+                  <td>352026</td>
+                  <td>4025933</td>
+                  <td>8.743961</td>
+                </tr>
+                <tr>
+                  <th>261</th>
+                  <td>2001</td>
+                  <td>20-24 years</td>
+                  <td>514959</td>
+                  <td>4025933</td>
+                  <td>12.791047</td>
+                </tr>
+                <tr>
+                  <th>265</th>
+                  <td>2002</td>
+                  <td>15-19 years</td>
+                  <td>340186</td>
+                  <td>4021726</td>
+                  <td>8.458707</td>
+                </tr>
+                <tr>
+                  <th>266</th>
+                  <td>2002</td>
+                  <td>20-24 years</td>
+                  <td>527657</td>
+                  <td>4021726</td>
+                  <td>13.120163</td>
+                </tr>
+                <tr>
+                  <th>270</th>
+                  <td>2003</td>
+                  <td>15-19 years</td>
+                  <td>337201</td>
+                  <td>4089950</td>
+                  <td>8.244624</td>
+                </tr>
+                <tr>
+                  <th>271</th>
+                  <td>2003</td>
+                  <td>20-24 years</td>
+                  <td>549353</td>
+                  <td>4089950</td>
+                  <td>13.431778</td>
+                </tr>
+                <tr>
+                  <th>275</th>
+                  <td>2004</td>
+                  <td>15-19 years</td>
+                  <td>342188</td>
+                  <td>4112052</td>
+                  <td>8.321587</td>
+                </tr>
+                <tr>
+                  <th>276</th>
+                  <td>2004</td>
+                  <td>20-24 years</td>
+                  <td>566381</td>
+                  <td>4112052</td>
+                  <td>13.773683</td>
+                </tr>
+                <tr>
+                  <th>280</th>
+                  <td>2005</td>
+                  <td>15-19 years</td>
+                  <td>345413</td>
+                  <td>4138349</td>
+                  <td>8.346638</td>
+                </tr>
+                <tr>
+                  <th>281</th>
+                  <td>2005</td>
+                  <td>20-24 years</td>
+                  <td>584792</td>
+                  <td>4138349</td>
+                  <td>14.131046</td>
+                </tr>
+                <tr>
+                  <th>285</th>
+                  <td>2006</td>
+                  <td>15-19 years</td>
+                  <td>366588</td>
+                  <td>4265555</td>
+                  <td>8.594145</td>
+                </tr>
+                <tr>
+                  <th>286</th>
+                  <td>2006</td>
+                  <td>20-24 years</td>
+                  <td>625780</td>
+                  <td>4265555</td>
+                  <td>14.670541</td>
+                </tr>
+                <tr>
+                  <th>290</th>
+                  <td>2007</td>
+                  <td>15-19 years</td>
+                  <td>380499</td>
+                  <td>4316233</td>
+                  <td>8.815534</td>
+                </tr>
+                <tr>
+                  <th>291</th>
+                  <td>2007</td>
+                  <td>20-24 years</td>
+                  <td>644553</td>
+                  <td>4316233</td>
+                  <td>14.933230</td>
+                </tr>
+                <tr>
+                  <th>295</th>
+                  <td>2008</td>
+                  <td>15-19 years</td>
+                  <td>376844</td>
+                  <td>4247694</td>
+                  <td>8.871731</td>
+                </tr>
+                <tr>
+                  <th>296</th>
+                  <td>2008</td>
+                  <td>20-24 years</td>
+                  <td>640746</td>
+                  <td>4247694</td>
+                  <td>15.084561</td>
+                </tr>
+                <tr>
+                  <th>300</th>
+                  <td>2009</td>
+                  <td>15-19 years</td>
+                  <td>357474</td>
+                  <td>4130665</td>
+                  <td>8.654151</td>
+                </tr>
+                <tr>
+                  <th>301</th>
+                  <td>2009</td>
+                  <td>20-24 years</td>
+                  <td>624293</td>
+                  <td>4130665</td>
+                  <td>15.113620</td>
+                </tr>
+                <tr>
+                  <th>305</th>
+                  <td>2010</td>
+                  <td>15-19 years</td>
+                  <td>323862</td>
+                  <td>3999386</td>
+                  <td>8.097793</td>
+                </tr>
+                <tr>
+                  <th>306</th>
+                  <td>2010</td>
+                  <td>20-24 years</td>
+                  <td>600833</td>
+                  <td>3999386</td>
+                  <td>15.023131</td>
+                </tr>
+                <tr>
+                  <th>310</th>
+                  <td>2011</td>
+                  <td>15-19 years</td>
+                  <td>291736</td>
+                  <td>3953590</td>
+                  <td>7.379015</td>
+                </tr>
+                <tr>
+                  <th>311</th>
+                  <td>2011</td>
+                  <td>20-24 years</td>
+                  <td>592554</td>
+                  <td>3953590</td>
+                  <td>14.987745</td>
+                </tr>
+                <tr>
+                  <th>315</th>
+                  <td>2012</td>
+                  <td>15-19 years</td>
+                  <td>270843</td>
+                  <td>3952841</td>
+                  <td>6.851857</td>
+                </tr>
+                <tr>
+                  <th>316</th>
+                  <td>2012</td>
+                  <td>20-24 years</td>
+                  <td>593894</td>
+                  <td>3952841</td>
+                  <td>15.024485</td>
+                </tr>
+                <tr>
+                  <th>320</th>
+                  <td>2013</td>
+                  <td>15-19 years</td>
+                  <td>242167</td>
+                  <td>3932181</td>
+                  <td>6.158592</td>
+                </tr>
+                <tr>
+                  <th>321</th>
+                  <td>2013</td>
+                  <td>20-24 years</td>
+                  <td>586874</td>
+                  <td>3932181</td>
+                  <td>14.924898</td>
+                </tr>
+                <tr>
+                  <th>326</th>
+                  <td>2014</td>
+                  <td>15-19 years</td>
+                  <td>220634</td>
+                  <td>3988076</td>
+                  <td>5.532342</td>
+                </tr>
+                <tr>
+                  <th>327</th>
+                  <td>2014</td>
+                  <td>20-24 years</td>
+                  <td>579760</td>
+                  <td>3988076</td>
+                  <td>14.537336</td>
+                </tr>
+                <tr>
+                  <th>330</th>
+                  <td>2015</td>
+                  <td>20-24 years</td>
+                  <td>560639</td>
+                  <td>3978497</td>
+                  <td>14.091729</td>
+                </tr>
+                <tr>
+                  <th>333</th>
+                  <td>2015</td>
+                  <td>15-19 years</td>
+                  <td>204043</td>
+                  <td>3978497</td>
+                  <td>5.128645</td>
+                </tr>
+                <tr>
+                  <th>337</th>
+                  <td>1971</td>
+                  <td>Less than 15 years</td>
+                  <td>9500</td>
+                  <td>3555970</td>
+                  <td>0.267156</td>
+                </tr>
+                <tr>
+                  <th>339</th>
+                  <td>1982</td>
+                  <td>Less than 15 years</td>
+                  <td>8720</td>
+                  <td>3680537</td>
+                  <td>0.236922</td>
+                </tr>
+                <tr>
+                  <th>340</th>
+                  <td>1940</td>
+                  <td>Less than 15 years</td>
+                  <td>2100</td>
+                  <td>2559000</td>
+                  <td>0.082063</td>
+                </tr>
+                <tr>
+                  <th>343</th>
+                  <td>1974</td>
+                  <td>Less than 15 years</td>
+                  <td>10600</td>
+                  <td>3159958</td>
+                  <td>0.335447</td>
+                </tr>
+                <tr>
+                  <th>346</th>
+                  <td>1996</td>
+                  <td>Less than 15 years</td>
+                  <td>10460</td>
+                  <td>3891494</td>
+                  <td>0.268791</td>
+                </tr>
+                <tr>
+                  <th>348</th>
+                  <td>1972</td>
+                  <td>Less than 15 years</td>
+                  <td>9900</td>
+                  <td>3258411</td>
+                  <td>0.303829</td>
+                </tr>
+                <tr>
+                  <th>350</th>
+                  <td>1959</td>
+                  <td>Less than 15 years</td>
+                  <td>4600</td>
+                  <td>4244796</td>
+                  <td>0.108368</td>
+                </tr>
+                <tr>
+                  <th>356</th>
+                  <td>1983</td>
+                  <td>Less than 15 years</td>
+                  <td>8816</td>
+                  <td>3638933</td>
+                  <td>0.242269</td>
+                </tr>
+                <tr>
+                  <th>357</th>
+                  <td>1968</td>
+                  <td>Less than 15 years</td>
+                  <td>7700</td>
+                  <td>3501564</td>
+                  <td>0.219902</td>
+                </tr>
+                <tr>
+                  <th>359</th>
+                  <td>1986</td>
+                  <td>Less than 15 years</td>
+                  <td>9415</td>
+                  <td>3756547</td>
+                  <td>0.250629</td>
+                </tr>
+                <tr>
+                  <th>360</th>
+                  <td>2010</td>
+                  <td>Less than 15 years</td>
+                  <td>4465</td>
+                  <td>3999386</td>
+                  <td>0.111642</td>
+                </tr>
+                <tr>
+                  <th>361</th>
+                  <td>1989</td>
+                  <td>Less than 15 years</td>
+                  <td>10612</td>
+                  <td>4040958</td>
+                  <td>0.262611</td>
+                </tr>
+                <tr>
+                  <th>364</th>
+                  <td>2006</td>
+                  <td>Less than 15 years</td>
+                  <td>6288</td>
+                  <td>4265555</td>
+                  <td>0.147413</td>
+                </tr>
+                <tr>
+                  <th>366</th>
+                  <td>2005</td>
+                  <td>Less than 15 years</td>
+                  <td>6590</td>
+                  <td>4138349</td>
+                  <td>0.159242</td>
+                </tr>
+                <tr>
+                  <th>367</th>
+                  <td>1977</td>
+                  <td>Less than 15 years</td>
+                  <td>10100</td>
+                  <td>3326632</td>
+                  <td>0.303610</td>
+                </tr>
+                <tr>
+                  <th>368</th>
+                  <td>1961</td>
+                  <td>Less than 15 years</td>
+                  <td>5200</td>
+                  <td>4268326</td>
+                  <td>0.121828</td>
+                </tr>
+                <tr>
+                  <th>374</th>
+                  <td>1981</td>
+                  <td>Less than 15 years</td>
+                  <td>8589</td>
+                  <td>3629238</td>
+                  <td>0.236661</td>
+                </tr>
+                <tr>
+                  <th>375</th>
+                  <td>1951</td>
+                  <td>Less than 15 years</td>
+                  <td>3200</td>
+                  <td>3820000</td>
+                  <td>0.083770</td>
+                </tr>
+                <tr>
+                  <th>376</th>
+                  <td>1953</td>
+                  <td>Less than 15 years</td>
+                  <td>3400</td>
+                  <td>3959000</td>
+                  <td>0.085880</td>
+                </tr>
+                <tr>
+                  <th>377</th>
+                  <td>1970</td>
+                  <td>Less than 15 years</td>
+                  <td>9500</td>
+                  <td>3731386</td>
+                  <td>0.254597</td>
+                </tr>
+                <tr>
+                  <th>379</th>
+                  <td>2015</td>
+                  <td>Less than 15 years</td>
+                  <td>2489</td>
+                  <td>3978497</td>
+                  <td>0.062561</td>
+                </tr>
+                <tr>
+                  <th>380</th>
+                  <td>1979</td>
+                  <td>Less than 15 years</td>
+                  <td>9500</td>
+                  <td>3494398</td>
+                  <td>0.271864</td>
+                </tr>
+                <tr>
+                  <th>381</th>
+                  <td>2007</td>
+                  <td>Less than 15 years</td>
+                  <td>6121</td>
+                  <td>4316233</td>
+                  <td>0.141813</td>
+                </tr>
+                <tr>
+                  <th>385</th>
+                  <td>1973</td>
+                  <td>Less than 15 years</td>
+                  <td>10900</td>
+                  <td>3136965</td>
+                  <td>0.347470</td>
+                </tr>
+                <tr>
+                  <th>386</th>
+                  <td>1957</td>
+                  <td>Less than 15 years</td>
+                  <td>4600</td>
+                  <td>4300000</td>
+                  <td>0.106977</td>
+                </tr>
+                <tr>
+                  <th>389</th>
+                  <td>1950</td>
+                  <td>Less than 15 years</td>
+                  <td>3200</td>
+                  <td>3632000</td>
+                  <td>0.088106</td>
+                </tr>
+                <tr>
+                  <th>392</th>
+                  <td>1955</td>
+                  <td>Less than 15 years</td>
+                  <td>3900</td>
+                  <td>4097000</td>
+                  <td>0.095192</td>
+                </tr>
+                <tr>
+                  <th>394</th>
+                  <td>2012</td>
+                  <td>Less than 15 years</td>
+                  <td>3637</td>
+                  <td>3952841</td>
+                  <td>0.092010</td>
+                </tr>
+                <tr>
+                  <th>399</th>
+                  <td>1963</td>
+                  <td>Less than 15 years</td>
+                  <td>5400</td>
+                  <td>4098020</td>
+                  <td>0.131771</td>
+                </tr>
+                <tr>
+                  <th>400</th>
+                  <td>1993</td>
+                  <td>Less than 15 years</td>
+                  <td>11467</td>
+                  <td>4000240</td>
+                  <td>0.286658</td>
+                </tr>
+                <tr>
+                  <th>401</th>
+                  <td>1975</td>
+                  <td>Less than 15 years</td>
+                  <td>11000</td>
+                  <td>3144198</td>
+                  <td>0.349851</td>
+                </tr>
+                <tr>
+                  <th>402</th>
+                  <td>1998</td>
+                  <td>Less than 15 years</td>
+                  <td>9137</td>
+                  <td>3941553</td>
+                  <td>0.231812</td>
+                </tr>
+                <tr>
+                  <th>406</th>
+                  <td>2003</td>
+                  <td>Less than 15 years</td>
+                  <td>6469</td>
+                  <td>4089950</td>
+                  <td>0.158168</td>
+                </tr>
+                <tr>
+                  <th>407</th>
+                  <td>1992</td>
+                  <td>Less than 15 years</td>
+                  <td>11161</td>
+                  <td>4065014</td>
+                  <td>0.274562</td>
+                </tr>
+                <tr>
+                  <th>408</th>
+                  <td>1988</td>
+                  <td>Less than 15 years</td>
+                  <td>9907</td>
+                  <td>3909510</td>
+                  <td>0.253408</td>
+                </tr>
+                <tr>
+                  <th>409</th>
+                  <td>1994</td>
+                  <td>Less than 15 years</td>
+                  <td>12186</td>
+                  <td>3952767</td>
+                  <td>0.308290</td>
+                </tr>
+                <tr>
+                  <th>410</th>
+                  <td>1958</td>
+                  <td>Less than 15 years</td>
+                  <td>4400</td>
+                  <td>4246000</td>
+                  <td>0.103627</td>
+                </tr>
+                <tr>
+                  <th>411</th>
+                  <td>2011</td>
+                  <td>Less than 15 years</td>
+                  <td>3939</td>
+                  <td>3953590</td>
+                  <td>0.099631</td>
+                </tr>
+                <tr>
+                  <th>412</th>
+                  <td>1964</td>
+                  <td>Less than 15 years</td>
+                  <td>5800</td>
+                  <td>4027490</td>
+                  <td>0.144010</td>
+                </tr>
+                <tr>
+                  <th>416</th>
+                  <td>1976</td>
+                  <td>Less than 15 years</td>
+                  <td>10300</td>
+                  <td>3167788</td>
+                  <td>0.325148</td>
+                </tr>
+                <tr>
+                  <th>417</th>
+                  <td>1960</td>
+                  <td>Less than 15 years</td>
+                  <td>4600</td>
+                  <td>4257850</td>
+                  <td>0.108036</td>
+                </tr>
+                <tr>
+                  <th>421</th>
+                  <td>1997</td>
+                  <td>Less than 15 years</td>
+                  <td>9685</td>
+                  <td>3880894</td>
+                  <td>0.249556</td>
+                </tr>
+                <tr>
+                  <th>422</th>
+                  <td>2013</td>
+                  <td>Less than 15 years</td>
+                  <td>3072</td>
+                  <td>3932181</td>
+                  <td>0.078125</td>
+                </tr>
+                <tr>
+                  <th>423</th>
+                  <td>2008</td>
+                  <td>Less than 15 years</td>
+                  <td>5710</td>
+                  <td>4247694</td>
+                  <td>0.134426</td>
+                </tr>
+                <tr>
+                  <th>425</th>
+                  <td>1985</td>
+                  <td>Less than 15 years</td>
+                  <td>9386</td>
+                  <td>3760561</td>
+                  <td>0.249590</td>
+                </tr>
+                <tr>
+                  <th>426</th>
+                  <td>2002</td>
+                  <td>Less than 15 years</td>
+                  <td>7093</td>
+                  <td>4021726</td>
+                  <td>0.176367</td>
+                </tr>
+                <tr>
+                  <th>431</th>
+                  <td>1966</td>
+                  <td>Less than 15 years</td>
+                  <td>6200</td>
+                  <td>3606274</td>
+                  <td>0.171923</td>
+                </tr>
+                <tr>
+                  <th>433</th>
+                  <td>1967</td>
+                  <td>Less than 15 years</td>
+                  <td>6900</td>
+                  <td>3520959</td>
+                  <td>0.195969</td>
+                </tr>
+                <tr>
+                  <th>435</th>
+                  <td>1990</td>
+                  <td>Less than 15 years</td>
+                  <td>10675</td>
+                  <td>4158212</td>
+                  <td>0.256721</td>
+                </tr>
+                <tr>
+                  <th>436</th>
+                  <td>1991</td>
+                  <td>Less than 15 years</td>
+                  <td>10968</td>
+                  <td>4110907</td>
+                  <td>0.266802</td>
+                </tr>
+                <tr>
+                  <th>438</th>
+                  <td>1969</td>
+                  <td>Less than 15 years</td>
+                  <td>8300</td>
+                  <td>3600206</td>
+                  <td>0.230542</td>
+                </tr>
+                <tr>
+                  <th>439</th>
+                  <td>1978</td>
+                  <td>Less than 15 years</td>
+                  <td>9400</td>
+                  <td>3333279</td>
+                  <td>0.282005</td>
+                </tr>
+                <tr>
+                  <th>442</th>
+                  <td>1995</td>
+                  <td>Less than 15 years</td>
+                  <td>11441</td>
+                  <td>3899589</td>
+                  <td>0.293390</td>
+                </tr>
+                <tr>
+                  <th>444</th>
+                  <td>1999</td>
+                  <td>Less than 15 years</td>
+                  <td>8737</td>
+                  <td>3959417</td>
+                  <td>0.220664</td>
+                </tr>
+                <tr>
+                  <th>445</th>
+                  <td>1962</td>
+                  <td>Less than 15 years</td>
+                  <td>5100</td>
+                  <td>4167362</td>
+                  <td>0.122380</td>
+                </tr>
+                <tr>
+                  <th>446</th>
+                  <td>2009</td>
+                  <td>Less than 15 years</td>
+                  <td>4980</td>
+                  <td>4130665</td>
+                  <td>0.120562</td>
+                </tr>
+                <tr>
+                  <th>447</th>
+                  <td>1965</td>
+                  <td>Less than 15 years</td>
+                  <td>6100</td>
+                  <td>3760358</td>
+                  <td>0.162219</td>
+                </tr>
+                <tr>
+                  <th>448</th>
+                  <td>1987</td>
+                  <td>Less than 15 years</td>
+                  <td>9583</td>
+                  <td>3809394</td>
+                  <td>0.251562</td>
+                </tr>
+                <tr>
+                  <th>450</th>
+                  <td>2014</td>
+                  <td>Less than 15 years</td>
+                  <td>2752</td>
+                  <td>3988076</td>
+                  <td>0.069006</td>
+                </tr>
+                <tr>
+                  <th>451</th>
+                  <td>2001</td>
+                  <td>Less than 15 years</td>
+                  <td>7494</td>
+                  <td>4025933</td>
+                  <td>0.186143</td>
+                </tr>
+                <tr>
+                  <th>455</th>
+                  <td>1954</td>
+                  <td>Less than 15 years</td>
+                  <td>3900</td>
+                  <td>4071000</td>
+                  <td>0.095800</td>
+                </tr>
+                <tr>
+                  <th>458</th>
+                  <td>2004</td>
+                  <td>Less than 15 years</td>
+                  <td>6603</td>
+                  <td>4112052</td>
+                  <td>0.160577</td>
+                </tr>
+                <tr>
+                  <th>460</th>
+                  <td>1984</td>
+                  <td>Less than 15 years</td>
+                  <td>9075</td>
+                  <td>3669141</td>
+                  <td>0.247333</td>
+                </tr>
+                <tr>
+                  <th>461</th>
+                  <td>2000</td>
+                  <td>Less than 15 years</td>
+                  <td>8219</td>
+                  <td>4058814</td>
+                  <td>0.202498</td>
+                </tr>
+                <tr>
+                  <th>463</th>
+                  <td>1956</td>
+                  <td>Less than 15 years</td>
+                  <td>4200</td>
+                  <td>4210000</td>
+                  <td>0.099762</td>
+                </tr>
+                <tr>
+                  <th>464</th>
+                  <td>1980</td>
+                  <td>Less than 15 years</td>
+                  <td>9024</td>
+                  <td>3612258</td>
+                  <td>0.249816</td>
+                </tr>
+                <tr>
+                  <th>467</th>
+                  <td>1952</td>
+                  <td>Less than 15 years</td>
+                  <td>3200</td>
+                  <td>3909000</td>
+                  <td>0.081862</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

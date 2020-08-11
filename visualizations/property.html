@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Data Visualization- Property</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+        <!-- Start of navbar -->
+       <!-- Start of navbar -->
+       <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="col-lg-12">
+              <a class="navbar-brand" href="../index.html" id="logo">Births Crime and Incarceration</a>
+            </div>
+          </div>
+    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                 <li><a href="births.html">Birth Rates</a></li>
+                  <li><a href="property.html">Property Crimes</a></li>
+                  <li><a href="violent.html">Violent Crimes</a></li>
+                  <li><a href="incar.html">Incarceration Rates</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../Data/birth_data.html">Birth Rate Data</a></li>
+                  <li><a href="../Data/crime_data.html">Crime Rate Data</a></li>
+                  <li><a href="../Data/incar_data.html">Incarceration Rate Data</a></li>
+                </ul>
+              </li>
+              <li><a href="../comparison.html">Comparison</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+      <!-- End of navbar -->
+
+    <!-- Start of container -->
+    <div class="container">
+      <section class="row">
+        <div class="col-md-8">
+          <article class="description-content">
+            <h1 class="description-header">Property Crime Rate</h1>
+            <hr class="description-hr"/>
+            <img src="../Resources/assets/images/Fig2.png" alt="" class="img-responsive"/>
+            <p>We can see that reported Property Crime Rates shot up during the 1960's, and peaked around 1980 or so. Similarly to the Violent Crime Rate, it only significantly started declining after 1990.</p>
+            <p>This is the <a href='https://www.ucrdatatool.gov/Search/Crime/State/StatebyState.cfm'>source</a> of the data</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+
+          <!-- Start of Visualizations imageNav Area -->
+          <section id="imageNav-area">
+            <div class="imageNav-content">
+              <h2 class="imageNav-header">Visualizations</h2>
+              <hr />
+              <div id="images">
+                <a href="births.html"><img src="../Resources/assets/images/Fig1.png" alt="Birth Rate" class="imageNav-photo active"></a>
+                <a href="property.html"><img src="../Resources/assets/images/Fig2.png" alt="Property Crime" class="imageNav-photo"></a>
+                <a href="violent.html"><img src="../Resources/assets/images/Fig3.png" alt="Violent Crime" class="imageNav-photo"></a>
+                <a href="incar.html"><img src="../Resources/assets/images/Fig4.png" alt="Incarceration Rate" class="imageNav-photo"></a>
+              </div>
+            </div>
+          </section>
+          <!-- End of the Visualizations imageNav Area -->
+
+        </div>
+      </section>
+    </div>
+    <!-- End of container -->
+
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
